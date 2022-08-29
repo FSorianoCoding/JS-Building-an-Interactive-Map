@@ -1,3 +1,7 @@
+// Originally created non-object code based on Leaflet instruction, 
+// but noticed solution wrapped everything and used .this to make 
+// searches easiser based on input information from arrays.
+
 // create map
 const myMap = L.map('map', {
     center: [48.868672, 2.342130],
@@ -27,10 +31,11 @@ const latlngs = [
 const polygon = L.polygon(latlngs,{
     color: 'blue',
     fill: false
-}).addTo(myMap)
+}).addTo(myMap)   //addTo(myMap) is referencing the variable we created on line 6.
 
 
 // create red pin marker
+// found in the Icon section of leaflet documentation online.
 const redPin = L.icon({
     iconUrl: './assets/red-pin.png',
     iconSize: [38, 38],
